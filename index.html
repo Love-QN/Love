@@ -6,6 +6,22 @@
   <title>Qutaibah & Nour - 25 May</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script>
+  function celebrate() {
+    // 🎉 Launch confetti
+    confetti();
+
+    // 💌 Show popup message
+    const popup = document.getElementById('popup');
+    popup.style.display = 'block';
+    setTimeout(() => popup.style.display = 'none', 4000);
+
+    // 🎵 Play music
+    const music = document.getElementById('loveMusic');
+    music.play();
+  }
+</script>
   <style>
     body {
       margin: 0;
@@ -78,7 +94,13 @@
     <img src="engagement-illustration.png" alt="Engagement Illustration">
     <h2 style="color:#be123c; margin-bottom: 0.5rem;">Celebrating Love & Commitment</h2>
     <p>25 May marks a day of meaning, connection, and the promise of a shared future. Today, we honor the beauty of this journey and the bond it represents.</p>
-    <button class="button">💖 With Gratitude</button>
+     <button class="button" onclick="celebrate()">💖 With Gratitude</button>
+
+<audio id="loveMusic" src="https://www.bensound.com/bensound-music/bensound-love.mp3"></audio>
+
+<div id="popup" style="display:none; position:fixed; top:40%; left:50%; transform:translate(-50%, -50%); background:white; padding:2rem; border-radius:1rem; box-shadow:0 0 15px rgba(0,0,0,0.2); z-index:9999; font-size:1.2rem; color:#be123c;">
+  Thank you for sharing our joy! 💕
+</div>
   </div>
 
   <div class="footer">
